@@ -6,5 +6,9 @@
 }
 
 .clicked {
-  background-color: red;
+  background-color: violet;
+}
+
+.clicked > span {
+  display: none;
 }
