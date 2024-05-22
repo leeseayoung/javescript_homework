@@ -16,11 +16,11 @@ users.forEach(function (user) {
   htmlContainer.insertAdjacentHTML("beforeend", html_content);
 });
 
-//3번 문제
-// const findGender = users.find(function (user) {
-//   return user.gender === "여";
-// });
-// console.log(findgender);
+// 3번 문제
+const findGender = users.find(function (user) {
+  return user.gender === "여";
+});
+console.log(findGender);
 
 //4번 문제
 // const filterGender = users.filter(fucntion(user) {
@@ -38,12 +38,16 @@ users.forEach(function (user) {
 // const ages = users.age.map(function (user) {
 //   return user + 10;
 // });
-//위 코드에서 age 뽑는다고 users.age 이렇게 해서 오류 발생 user + 10; 에서 age 안뽑혔는데 더해서 망함!
+// 위 코드에서 age 뽑는다고 users.age 이렇게 해서 오류 발생 user + 10; 에서 age 안뽑혔는데 더해서 망함!
 
-// const ages = users.map(function (user) {
-//   return user.age + 10;
-// });
-// console.log(ages);
+const ages = users.map(function (user) {
+  return {
+    이름: user.name,
+    나이: user.age + 10,
+    성별: user.gender,
+  };
+});
+console.log(ages);
 
 //6번 문제
 
